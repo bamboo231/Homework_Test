@@ -1,0 +1,124 @@
+
+/*用來做點擊才顯示的選單*/
+.dropdown-menu {
+  position: relative;
+}
+
+.dropdown-menu > ul {     /*ul元件平常不顯示*/
+  background-color: rgb(156, 155, 175);
+  width: 130px;
+  position: absolute;
+  z-index: 1;          /*堆疊:圖在前*/
+  display: none;
+}
+.dropdown-menu > ul:hover {
+  display:block;          /*讓ul元件在span:focus消失的情況下還能繼續顯示*/
+    }
+
+.dropdown-menu > span:focus ~ ul {        /*兄弟選擇器(A ~ B):選擇A之後所有同級的B元素*/
+  display: block;
+}
+
+
+div{
+    float: left;
+    text-align:center;
+    align-items: center;
+}
+
+/*頁首上面選單的id*/
+#d1{
+  background-color: rgb(224, 220, 203);
+  width:calc(100% - 5px);
+  margin-bottom: 10px;
+  align-items: center;
+}
+/*頁首右上角連結的class*/
+.c1{
+  height:40px;
+  align-items: center;
+  width: 100px;
+  float: right;  
+}
+
+/*橫線*/
+hr{
+    size:8px;
+    align-items: center;
+    width:100%;
+    clear:both;
+  }
+
+
+
+/*首頁 圖片外框的class*/
+.indexoutline{
+  margin-top: 50px;
+  text-align: center;
+  width: calc(33% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+/*首頁 圖片本身的class*/
+.indeximg{
+  opacity: 0.5; 
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  width: 90%;
+}
+.indeximg:hover{
+  opacity: 1; 
+}
+.imgtxt{
+  border-radius: 10px;
+  text-align: center;
+  align-items: center;
+  width: 90%;
+}
+
+/*關於我 圖片的class*/
+.aboutimg{
+  float: none;
+  position: absolute;
+  width: 600px;
+  height: 600px;
+  top: 55%;
+  left: 50%;
+  margin: -150px 0 0 -300px;
+}
+.aboutext{
+  position: relative;
+  width: 600px;
+  left: 50%;
+  top: 750px;
+  margin: -150px 0 0 -300px;
+}
+
+/*作品 圖片外框的class*/
+.dooutline{
+  text-align: center;
+  width: calc(33% - 20px);
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+/*作品 圖片本身的class*/
+.doimg{
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  width: 120;
+}
+
+/*LINK 圖片本身的class*/
+.linkimg{
+  opacity: 0.5; 
+  border-radius: 20px;
+  text-align: center;
+  align-items: center;
+  width: 120;
+}
+.linkimg:hover{
+  opacity: 1; 
+}
